@@ -1,6 +1,6 @@
 import cv2, numpy, os
 size = 4
-haar_file = 'haarcascade_frontalface_default.xml'
+haar_file = cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
 datasets = 'datasets'
 print('Training...')
 (images, labels, names, id) = ([], [], {}, 0)

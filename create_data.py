@@ -1,9 +1,9 @@
 import cv2, os
-haar_file = 'haarcascade_frontalface_default.xml'
+haar_file = cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
 datasets = 'datasets'  
-sub_data = 'selvakumar'     
+sub_data = 'varadhu'     
 
-path = os.path.join(datasets, sub_data) #datasets/Ramesh
+path = os.path.join(datasets, sub_data)
 if not os.path.isdir(path):
     os.mkdir(path)
 (width, height) = (130, 100)   
@@ -11,7 +11,7 @@ if not os.path.isdir(path):
 
 face_cascade = cv2.CascadeClassifier(haar_file)
 
-webcam = cv2.VideoCapture(0)  #camera ini
+webcam = cv2.VideoCapture(0) 
 
 count = 1
 while count < 31:
