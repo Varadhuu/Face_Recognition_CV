@@ -1,5 +1,5 @@
 import cv2, os
-haar_file = 'haarcascade_frontalface_default.xml'
+haar_file = cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
 datasets = 'datasets'  
 sub_data = 'varadhu'     
 
