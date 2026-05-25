@@ -21,7 +21,7 @@ for (subdirs, dirs, files) in os.walk(datasets):
 
 #print(images, labels)
 model = cv2.face.LBPHFaceRecognizer_create()
-##model =  cv2.face.FisherFaceRecognizer_create()
+
 model.train(images, labels)
 
 face_cascade = cv2.CascadeClassifier(haar_file)
@@ -29,7 +29,7 @@ webcam = cv2.VideoCapture(0)
 cnt=0
 while True:
     (_, im) = webcam.read()
-    gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY) #converting gray scale
+    gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
     for (x,y,w,h) in faces:
         cv2.rectangle(im,(x,y),(x+w,y+h),(255,255,0),2)
